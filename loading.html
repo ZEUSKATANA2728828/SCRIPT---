@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Loading</title>
+<title>Loading...</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="loading">
+<body class="loading-page">
 
-<div class="loader"></div>
-<p>Carregando...</p>
+<div class="loader">
+  <span>⏳ Carregando...</span>
+</div>
+
+<script>
+  const destino = localStorage.getItem("destino");
+
+  setTimeout(() => {
+    if (destino) {
+      window.location.href = destino;
+    } else {
+      window.location.href = "index.html";
+    }
+  }, 1200); // ⬅️ 1.2 segundos (rápido e bonito)
+</script>
 
 </body>
 </html>
