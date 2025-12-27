@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Hoho hub</title>
+<title>Hoho Hub</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Hoho hub</h2>
-<p class="warningText">
-Esse script contém Key (chave de acesso).  
-Ao pegar a Key podem aparecer cenas pornográficas +18.
-</p>
+<h1>🔥 Hoho Hub</h1>
 
-<button onclick="go('loading.html')">Aceitar</button>
-<button onclick="go('bloxfruits.html')">Não aceitar</button>
+<button onclick="copyScript()">📋 Copiar Script</button>
 
-<script src="script.js"></script>
+<pre id="script">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+</pre>
+
+<script>
+function copyScript() {
+  navigator.clipboard.writeText(
+    document.getElementById("script").innerText
+  );
+  alert("Script copiado!");
+}
+</script>
+
 </body>
 </html>
