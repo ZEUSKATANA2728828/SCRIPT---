@@ -1,55 +1,91 @@
-body{
-background:#0b0b0b;
-color:white;
-font-family:Arial;
-text-align:center;
-padding:20px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-button{
-width:90%;
-max-width:420px;
-padding:15px;
-margin:10px;
-border:none;
-border-radius:8px;
-background:#6a00ff;
-color:white;
-font-size:16px;
+/* Corpo do site */
+body {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
-textarea{
-width:90%;
-height:260px;
-background:#111;
-color:#0f0;
-padding:10px;
-border-radius:8px;
+/* Títulos */
+h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #00ffd5;
 }
 
-.warningText{
-background:rgba(255,255,255,0.1);
-padding:15px;
-border-radius:8px;
+/* 🔘 BOTÕES (vale pra TODOS do site) */
+button {
+  width: 90%;              /* bem esticado */
+  max-width: 420px;
+  padding: 18px 20px;      /* gordinho */
+  margin: 12px auto;
+  display: block;
+
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 18px;     /* arredondado */
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-.loading{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-height:100vh;
+/* Hover / toque */
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #00ffd5, #00aaff);
 }
 
-.loader{
-width:50px;
-height:50px;
-border:6px solid #333;
-border-top:6px solid #6a00ff;
-border-radius:50%;
-animation:spin 1s linear infinite;
+/* Clique */
+button:active {
+  transform: scale(0.97);
 }
 
-@keyframes spin{
-100%{transform:rotate(360deg);}
+/* Área de script */
+pre {
+  width: 95%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+
+  background: #111;
+  color: #00ff88;
+  border-radius: 12px;
+
+  text-align: left;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+/* Página de loading */
+.loading-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loader */
+.loader span {
+  font-size: 22px;
+  color: #00ffd5;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
 }
